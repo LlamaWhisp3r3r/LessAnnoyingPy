@@ -6,6 +6,16 @@
 Welcome to LessAnnoyingPy's documentation!
 ==========================================
 
+This page lists all the API Documentation for the LessAnnoyingPy python module.
+
+To start out, make sure that you have the LessAnnoyingPy module installed by running:
+
+``python -m pip install LessAnnoyingPy``
+
+This should should install requests when you install the module but if it didn't then run:
+
+``python -m pip install requests``
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -13,6 +23,7 @@ Welcome to LessAnnoyingPy's documentation!
 
 API Documentation
 =================
+ This is going to be added. I just need to figure out what I am doing...
 
 
 
