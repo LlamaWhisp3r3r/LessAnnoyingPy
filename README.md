@@ -1,4 +1,5 @@
-# Project Description
+# LessAnnoyingPy
+With this module you can connect to the Less Annoying CRM's API using python.
 
 ## Requirements
 
