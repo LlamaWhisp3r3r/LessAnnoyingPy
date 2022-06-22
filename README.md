@@ -13,4 +13,4 @@ python -m pip install less-annoying-py
 
 # Usage
 
-API reference and User Guide available on [Github Wiki]([less-annoying-py.readthedocs.io](https://github.com/NathanTurner270/less-annoying-py/wiki))
+API reference and User Guide available on [Github Wiki](https://github.com/NathanTurner270/less-annoying-py/wiki)
