@@ -3,36 +3,18 @@ import unittest
 import json
 
 location = input("Please Input Token Location>> ")
-pipeline_id = input("Please input a PipelineId>> ")
-status_id = input("Please input a StatusId>> ")
 crm = LACRM(location)
-test_email = {
-    '0': {
-        'Text': "test@example.com",
-        "Type": "Work"
-    }
-}
-test_phone = {
-    '0': {
-        'Text': '888-888-8888',
-        'Type': "Work"
-    }
-}
-test_address = {
-    '0': {
-        'Street': '123 Example St. \\n Apt #321',
-        'City': 'St. Example',
-        'State': 'EX',
-        'Zip': '84321',
-        'Country': 'U.S.',
-        'Type': 'Shipping'
-    }
-}
-test_birthday = '01/01/2000'
-dummy_contact = Contact(FullName="Test Name Jr.", Email=test_email, Phone=test_phone,
-                        Address=test_address, Birthday=test_birthday)
-test_contact = Contact(FullName="API Test Client Sr",
-                       ContactId="3818085374776211592754299835266")
+test_data = crm.TOKENS['test-data']
+test_dummy = test_data['dummy-contact']
+test_contact = test_data['test-contact']
+
+dummy_contact = Contact(FullName=test_dummy['test-full-name'],
+                        Email=test_dummy['test-email'], Phone=test_dummy['test-phone'],
+                        Address=test_dummy['test-address'],
+                        Birthday=test_dummy['test-birthday'])
+
+test_contact = Contact(FullName=test_contact['test-contact-name'],
+                       ContactId=test_contact['test-contact-id'])
 
 
 class CRMTest(unittest.TestCase):
@@ -158,3 +140,6 @@ class CRMTest(unittest.TestCase):
         result = crm.get_custom_fields()
         print("Get Custom Fields Data: ", result.text, result, end="\n" * 2)
         self.assertEqual(result.status_code, 200)
+
+if __name__ == '__main__':
+    unittest.main()

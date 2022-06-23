@@ -40,7 +40,7 @@ class LACRM:
 
     def __set_tokens(self):
         with open(self.__TOKENLOCATION) as f:
-            self.__TOKENS = json.load(f)['crm-tokens']
+            self.TOKENS = json.load(f)['crm-tokens']
 
     def __add_api_function(self, parameters, function):
         try:
@@ -48,8 +48,8 @@ class LACRM:
         except KeyError:
             pass
 
-        parameters["UserCode"] = self.__TOKENS['user-token']
-        parameters["APIToken"] = self.__TOKENS['api-token']
+        parameters["UserCode"] = self.TOKENS['user-token']
+        parameters["APIToken"] = self.TOKENS['api-token']
         parameters['Function'] = function
 
     def __remove_none_params(self, parameters):

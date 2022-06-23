@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name = "LessAnnoyingPy",
-    version = "0.0.3",
+    version = "1.0.0",
     author = "Nate Turner",
     author_email = "nathanturner270@gmail.com",
     description = ("Communicates to the Less Annoying CRM API using python."),

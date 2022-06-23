@@ -13,4 +13,4 @@ Contact(FullName=None, Salutation=None, FirstName=None, MiddleName=None,
     Contact template to ease the process of the CRM class
 """
 
-__version__ = "0.0.3"
+__version__ = "1.0.0"
