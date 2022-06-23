@@ -8,7 +8,7 @@ With this module you can connect to the Less Annoying CRM's API using python.
 
 # Installing
 ```
-python -m pip install less-annoying-py
+python -m pip install https://github.com/NathanTurner270/less-annoying-py.git
 ```
 
 # Usage
